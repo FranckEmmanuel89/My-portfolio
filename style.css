@@ -1,0 +1,113 @@
+.link-about:hover, .link-projects:hover, .link-contact:hover {
+    color: rgb(212, 212, 250);
+} 
+.link-about::after, .link-projects::after, .link-contact::after {
+    content: "";
+    bottom: -4px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(33,9,121,1) 35%, rgb(244, 220, 178) 100%);
+    transform: scale(0);
+    transition: transform 0.35s ease-in-out;
+}
+.link-about:hover::after, .link-projects:hover::after, .link-contact:hover::after {
+    transform: scale(1);
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.nav-bar-menu {
+    transition: transform 1s ease-in-out;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: rgb(159, 145, 120);
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+
+
+.logo-vue-animation:hover {
+     filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.logo-css-animation:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo-html-animation:hover {
+    filter: drop-shadow(0 0 2em #e69645aa);
+}
+
+.logo-js-animation:hover {
+   filter: drop-shadow(0 0 2em #dbda91aa);
+}
+
+.logo-git-animation:hover {
+    filter: drop-shadow(0 0 2em #f02323aa);
+ }
+
+.logo-tailwind-animation:hover {
+    filter: drop-shadow(0 0 2em #38BDF8);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.77);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.more {
+    display: none;
+}
+
+.more-btn {
+    color: black;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 0 auto;
+    background-color: white;
+    width: 100px;
+    padding: 8px;
+    transition: background-color 300ms linear;
+}
+
+.more-btn:hover {
+    background-color: wheat;
+    color: rgb(40, 37, 37);
+}
+
+.more-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.lang {
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
