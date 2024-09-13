@@ -96,7 +96,10 @@ const more = document.querySelector(".more");
 
 moreBtn.addEventListener("click", () => {
   if (more.style.display === "none" || more.style.display === "") {
-    more.style.display = "block";
+    more.style.display = "flex";
+    more.style.flexDirection = "column";
+    more.style.justifyContent = "center";
+    more.style.alignItems = "center";
     moreBtn.textContent = "Less";
   } else {
     more.style.display = "none";
@@ -121,3 +124,24 @@ langToggle.addEventListener('click', () => {
 
     langToggle.textContent = lang === 'en' ? 'Italiano' : 'English';
 });
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+      if (response.ok) {
+          alert("Your message has been sent successfully!");
+          this.reset();
+      } else {
+          alert("Oops! There was a problem submitting your form");
+      }
+  })
+  .catch(error => console.error('Error:', error));
+});
+
