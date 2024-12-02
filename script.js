@@ -143,5 +143,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
       }
   })
   .catch(error => console.error('Error:', error));
+  contact-form.reset()
 });
 
