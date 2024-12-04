@@ -29,8 +29,6 @@ body {
     transform: translateY(-100%);
 }
 
-
-
 .circle {
     height: 24px;
     width: 24px;
@@ -40,7 +38,6 @@ body {
     top: -100px;
     left: 0;
 }
-
 
 .logo-vue-animation:hover {
      filter: drop-shadow(0 0 2em #42b883aa);
